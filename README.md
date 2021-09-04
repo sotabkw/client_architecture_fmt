@@ -7,6 +7,22 @@ Tailwind CSS<br />
 ESLint + Prettier<br />
 Jest<br />
 
+##Architecture
+```
+project/
+├ lib     　　　#例外クラスとAPIクライアントクラス
+├ domain/　　　 #ドメインモデルとドメインロジックを定義
+├ driver       #外部データを取得
+├ interface/   #各レイヤーinterface定義
+   └ driver
+   └ repository
+   └ useCase
+├ presenter/　  #UI実装を定義
+├ repository/　 #domainモデルに変換する層
+├ useCase/　　　#ユースケースを定義
+└ pages        #Nextでのルーティング用のindexファイル定義
+```
+
 ## Getting Started
 
 First, run the development server:
