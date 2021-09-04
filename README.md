@@ -1,4 +1,3 @@
-
 ## Development environment
 
 Next.js<br />
@@ -8,6 +7,7 @@ ESLint + Prettier<br />
 Jest<br />
 
 ##Architecture
+
 ```
 project/
 ├ lib     　　　#例外クラスとAPIクライアントクラス
