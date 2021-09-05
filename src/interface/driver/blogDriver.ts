@@ -1,9 +1,9 @@
 export default interface BlogDriver {
-  findAll(): Promise<BlogJson>
+  fetchBlog(): Promise<BlogJson>
 }
 
 export interface BlogJson {
-  articles: ArticleJson[]
+  contents: ArticleJson[]
   totalCount: number
 }
 
