@@ -6,7 +6,7 @@ Tailwind CSS<br />
 ESLint + Prettier<br />
 Jest<br />
 
-##Architecture
+## Architecture
 
 ```
 project/
