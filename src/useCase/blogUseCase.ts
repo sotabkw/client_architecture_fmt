@@ -9,7 +9,7 @@ export default class BlogUseCaseImpl implements BlogUseCase {
     this.blogRepository = repository
   }
 
-  async fetchArticles(): Promise<Blog> {
-    return await this.blogRepository.findAll()
+  async fetchBlog(): Promise<Blog> {
+    return await this.blogRepository.fetchBlog()
   }
 }
