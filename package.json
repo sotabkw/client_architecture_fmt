@@ -15,7 +15,7 @@
   },
   "lint-staged": {
     "src/**/*.{ts,tsx}": [
-      "eslint src/**/*.{ts,tsx} --fix"
+      "eslint src/**/*.{ts,tsx} --fix tsc -p . --noEmit"
     ],
     "src/**": [
       "prettier --write ."
