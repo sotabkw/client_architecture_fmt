@@ -51,7 +51,7 @@ export class RestClient implements RestClientInterface {
   private get requestConfig(): AxiosRequestConfig {
     return {
       baseURL: API_ORIGIN,
-      withCredentials: true,
+      withCredentials: false,
       headers: {
         "Content-Type": "application/json",
         "X-API-KEY": process.env.NEXT_PUBLIC_MICRO_CMS_API_KEY
