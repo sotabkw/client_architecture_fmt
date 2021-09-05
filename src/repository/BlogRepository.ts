@@ -4,16 +4,16 @@ import { Blog } from "@domain/bolg"
 import { Article } from "@domain/article"
 
 export default class BlogRepositoryImpl implements BlogRepository {
-  private readonly articleDriver: BlogDriver
+  private readonly blogDriver: BlogDriver
 
   constructor(blogDriver: BlogDriver) {
-    this.articleDriver = blogDriver
+    this.blogDriver = blogDriver
   }
 
-  async findAll(): Promise<Blog> {
-    const res = await this.articleDriver.findAll()
+  async fetchBlog(): Promise<Blog> {
+    const res = await this.blogDriver.fetchBlog()
     return new Blog(
-      res.articles.map((a) => new Article(a.id, a.body, a.title, a.publishedAt, a.category)),
+      res.contents.map((a) => new Article(a.id, a.body, a.title, a.publishedAt, a.category)),
       res.totalCount
     )
   }
